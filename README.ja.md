@@ -17,6 +17,8 @@ FLARUMをDocker化します
 
 1. このリポジトリをCloneまたはダウンロードします。
 1. 環境に合わせて`docker-compose.yml`を編集します。
+1. `docker-compose up -d database`コマンドを実行し、MariaDBを起動します。
+   データベースが利用可能になるまで少々時間がかかります。
 1. `docker-compose up -d`コマンドを実行します。
 1. ちょっと待ってからブラウザで`http://localhost/`を開きます。
 
