@@ -2,7 +2,7 @@
 
 FLARUMをDocker化します
 
-英語バージョンは[こちら](https://github.com/moochannel/flarum-docker/blob/master/README.md)
+英語バージョンは[こちら](https://github.com/xpjp/flarum-docker/blob/master/README.md)
 
 ## Description
 

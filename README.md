@@ -2,7 +2,7 @@
 
 Dockerized FLARUM
 
-Japanese README is [here](https://github.com/moochannel/flarum-docker/blob/master/README.ja.md).
+Japanese README is [here](https://github.com/xpjp/flarum-docker/blob/master/README.ja.md).
 
 ## Description
 
