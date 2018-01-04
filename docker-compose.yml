@@ -1,7 +1,7 @@
 version: "2.3"
 services:
   forum:
-    image: moochannel/flarum-fpm
+    image: xpjp/flarum-fpm
     volumes:
       - web-contents:/var/www/html
       - web-assets:/var/www/html/assets
@@ -22,19 +22,19 @@ services:
     volumes:
       - db-data:/var/lib/mysql
     command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
-    environment:
-      MYSQL_ROOT_PASSWORD: "d23GNCfhaZOtgaic_bDw"
-      MYSQL_USER: "xpjp"
-      MYSQL_PASSWORD: "xpjp-passwd"
-      MYSQL_DATABASE: "xpjp-forum"
+    environment:    #  Should be overwritten in docker-compose-override.yml
+      MYSQL_ROOT_PASSWORD: "The-password-of-root-of-mariadb"
+      MYSQL_USER: "Mariadb-user"
+      MYSQL_PASSWORD: "Mariadb-password"
+      MYSQL_DATABASE: "Database-name-for-forum"
 volumes:
-  db-data:
+  db-data:          #  Should be overwritten in docker-compose-override.yml
     # driver_opts:
     #   type: none
     #   device: </path/to/db-data>
     #   o: bind
   web-contents:
-  web-assets:
+  web-assets:       #  Should be overwritten in docker-compose-override.yml
     # driver_opts:
     #   type: none
     #   device: </path/to/assets>

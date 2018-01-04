@@ -2,7 +2,7 @@
 
 Dockerized FLARUM
 
-Japanese README is [here](https://github.com/moochannel/flarum-docker/blob/master/README.ja.md).
+Japanese README is [here](https://github.com/xpjp/flarum-docker/blob/master/README.ja.md).
 
 ## Description
 
@@ -17,7 +17,9 @@ Start:
 
 1. Clone or download this repository.
 1. Edit `docker-compose.yml` to fit your environment.
+1. Start services with `docker-compose up -d data` command, then wait for MariaDB is available.
 1. Start services with `docker-compose up -d` command.
+1. Open `http://localhost/` with your browser.
 
 Stop:
 
