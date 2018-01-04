@@ -1,5 +1,7 @@
 FROM php:7.1-fpm
 
+ARG \
+  FLARUM_VERSION
 ENV \
   COMPOSER_ALLOW_SUPERUSER=1 \
   COMPOSER_HOME=/tmp
@@ -27,7 +29,7 @@ WORKDIR /var/www/html
 
 # Add flarum
 RUN \
-  composer create-project flarum/flarum . --stability=beta
+  composer create-project flarum/flarum=${FLARUM_VERSION} . --stability=beta
 
 # Add flarum extensions, then clean up
 RUN \
