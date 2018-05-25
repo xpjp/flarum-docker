@@ -30,12 +30,11 @@ WORKDIR /var/www/html
 
 # Add flarum
 RUN \
-  composer create-project flarum/flarum=${FLARUM_VERSION} . --stability=beta
+  composer create-project flarum/flarum=${FLARUM_VERSION} . --stability=beta && \
+  composer clear-cache
 
-# Add flarum extensions, then clean up
+# Symlink config.php to move into Docker volume
 RUN \
-  composer require naga0ka/flarum-ext-japanese && \
-  composer clear-cache && \
   ln -s assets/config.php config.php
 
 VOLUME ["/var/www/html", "/var/www/html/assets"]
